@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+<script>
+  function String1(input) {
+    let NewArr = input.split(" ");
+    console.log(NewArr);
+    let LargestWord = "";
+    for (let i = 0; i < NewArr.length; i++) {
+      if (NewArr[i].length > LargestWord.length) {
+        LargestWord = NewArr[i];
+      }
+    }
+    return LargestWord;
+  }
+  console.log(String1("My name is Ankit, i am from morena"));
+</script>
+
+<!-- algorithm -->
+1. initiate with making an input box and two buttons - "undo" and "redo" 2.we'll
+make a function for this and onclick for this 3. whatever input is given we'll
+split it into array such that we get seperate letters as we erase seperate
+letters. 4. Upon on-click that one letter will pop and will get stored in new
+empty array. 5. so similarly all five letters will get stored upon undo in an
+array ( say - ankit) 6. Now on redo, the values which are stored in an array
+will be taken as an input . 7. so basically while we are performing on-click
+redo, we push the values, but now array will go in reverse order as the value
+which was popped out last will now be pushed in first which is (array.length-1)
