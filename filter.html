@@ -42,3 +42,68 @@
 
   console.log(output);
 </script>
+<!-- we want to filter the data array to only include objects where the color property matches one of the values in the colors array, resulting in the desired output array. The objects in the data array have an id, color, name, and city property. -->
+
+<!-- algo- 
+- In this code, the filter method is used on the data array. 
+- The filter function checks each object in the data array and keeps only those objects where the color property matches one of the values in the colors array. - The resulting filtered objects are stored in the output array, which will contain the desired result.
+
+- When you run this code, the output array will contain the objects with matching colors, as shown in your desired output. -->
+
+<!-- question-  -->
+<!-- const colors = ["red", "blue"];
+
+  const data = [
+    {
+      id: 1,
+      color: "red",
+      name: "John",
+      city: "New York",
+    },
+    {
+      id: 2,
+      color: "blue",
+      name: "Emily",
+      city: "Los Angeles",
+    },
+    {
+      id: 3,
+      color: "green",
+      name: "Michael",
+      city: "Chicago",
+    },
+    {
+      id: 4,
+      color: "olive",
+      name: "Sophia",
+      city: "Houston",
+    },
+  ];
+  
+  
+    const output = [
+    {
+      id: 1,
+      color: "red",
+      name: "John",
+      city: "New York",
+    },
+    {
+      id: 2,
+      color: "blue",
+      name: "Emily",
+      city: "Los Angeles",
+    },
+  ];
+
+  explaination of filter function (from chatgpt)- 
+  Of course! Imagine you have a box of different colored marbles, and you also have a list of your favorite colors. You want to pick out only the marbles that match your favorite colors from the box.
+
+In this case, the box of marbles is like the `data` array, and your list of favorite colors is like the `colors` array. The `filter` function is like a magical sieve that you can use to go through the marbles. For each marble (or object in the `data` array), the sieve checks if the color of the marble is in your list of favorite colors.
+
+If the color of the marble matches one of your favorite colors, the sieve keeps that marble and puts it in a new box called the `output` array. If the color doesn't match any of your favorite colors, the sieve lets the marble go and doesn't put it in the new box.
+
+Once the sieve has gone through all the marbles (objects in the `data` array), you'll be left with only the marbles (objects) that match your favorite colors in the new box (the `output` array). So, the `filter` function helps you filter out the marbles (objects) you like based on their colors, just like how it filtered out the objects in the `data` array based on the colors in the `colors` array. -->
+
+<!-- link for understanding - 
+https://www.w3schools.com/jsref/jsref_some.asp -->
