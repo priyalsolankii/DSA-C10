@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+<script>
+  //     date- 21/08/2023
+  //     question link -
+  //     https://leetcode.com/problems/valid-parentheses/
+  //     question:
+  //     Given a string s containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid.
+
+  // An input string is valid if:
+
+  // Open brackets must be closed by the same type of brackets.
+  // Open brackets must be closed in the correct order.
+  // Every close bracket has a corresponding open bracket of the same type.
+
+  //   algorithm-
+  //   1- we will traverse the input string from left to right
+  //   2- we will use stack data structure here
+  //   3- whenever we get an open bracket we will push it into the stack
+  //   4- and whenever we get closing bracket we will check if there is corresponding open bracket in the top of the stack, if thr is then we'll pop the open bracket from the stack
+  //   5- after traversing all the characters in the string if the stack is empty and if all opening brackets have matching closing brackets we'll return true or else false
+  //   6- and if the the stak is not empty it means thr are unmatched opening brackets in the stack hence return false.
+</script>
