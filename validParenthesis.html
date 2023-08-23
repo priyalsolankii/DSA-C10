@@ -15,7 +15,7 @@
   //     question:
   //     Given a string s containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid.
 
-  // An input string is valid if:
+  //   An input string is valid if:
 
   // Open brackets must be closed by the same type of brackets.
   // Open brackets must be closed in the correct order.
@@ -28,4 +28,37 @@
   //   4- and whenever we get closing bracket we will check if there is corresponding open bracket in the top of the stack, if thr is then we'll pop the open bracket from the stack
   //   5- after traversing all the characters in the string if the stack is empty and if all opening brackets have matching closing brackets we'll return true or else false
   //   6- and if the the stak is not empty it means thr are unmatched opening brackets in the stack hence return false.
+
+  //   code-
+  /**
+   * @param {string} s
+   * @return {boolean}
+   */
+  var isValid = function (s) {
+    const stack = [];
+    const mapping = {
+      ")": "(",
+      "}": "{",
+      "]": "[",
+    };
+
+    if (s.length !== 0) {
+      for (let char of s) {
+        if (char in mapping) {
+          if (stack.length === 0) {
+            return false;
+          } else {
+            const topElement = stack.pop();
+            if (topElement !== mapping[char]) {
+              return false;
+            }
+          }
+        } else {
+          stack.push(char);
+        }
+      }
+      return stack.length === 0;
+    }
+    return true;
+  };
 </script>
