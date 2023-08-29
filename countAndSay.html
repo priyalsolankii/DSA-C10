@@ -41,4 +41,34 @@
   // The fourth iteration generates "111221" (one 1, one 2, two 1's).
   // The fifth iteration generates "312211" (three 1's, two 2's, one 1).
   // The sixth iteration generates "131122311" (one 3, one 1, one 2, two 2's, three 1's).
+
+  //   algo for code -
+  //   Start with an array containing the first term: ["1"].
+
+  // For each subsequent term:
+
+  // Get the previous term from the array.
+  // Initialize an empty string called nextTerm to store the digits of the next term.
+  // Initialize a count to keep track of how many times the current digit occurs consecutively.
+  // For each digit in the previous term:
+
+  // If the current digit is the same as the next digit, increment the count.
+  // If the current digit is different from the next digit, add the count followed by the current digit to nextTerm.
+  // Reset the count to 1.
+  // After processing all digits in the previous term, add the final count and digit to nextTerm.
+
+  // Add the nextTerm to the array of terms.
+
+  // Repeat steps 2-5 for the desired number of terms.
+
+  // The resulting array will contain the look-and-say sequence up to the specified number of term
+
+  //   Roopesh Vishwakarma8:06 PM
+  // @sonia
+  // 1 = 1;
+  // 2=(1)=(n-1)=>11;
+  // 3=(n-1)=21;
+  // 4=(3)=1211;
+  // 5=111221;
+  // 6=312211;
 </script>
