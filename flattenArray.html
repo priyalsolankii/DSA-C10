@@ -19,10 +19,77 @@
   //     [10, 11, 12, 13, 14, 15]
   // ];
   // const result = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
+
+  //   code -
+
+  let arr = [
+    [1, 2],
+    [3, 4],
+    [5, 6, 7, 8, 9],
+    [10, 11, 12, 13, 14, 15],
+  ];
+
+  let newarray = [];
+  for (let i = 0; i < arr.length; i++) {
+    for (j = 0; j < arr[i].length; j++) {
+      newarray.push(arr[i][j]);
+    }
+  }
+
+  console.log(newarray);
+
+  //   algo -
+
+  //   The given code takes a two-dimensional array called 'arr' and flattens it into a one-dimensional array called 'newarray.'
+  //   Initialize an empty array called 'newarray' to store the flattened elements.
+  // Start a loop that iterates through the rows of the 'arr' array (outer loop).
+  // For each row in 'arr':
+  // Start another loop that iterates through the elements in that row (inner loop).
+  // For each element in the current row:
+  // Add that element to the 'newarray.'
+  // Once both loops have finished iterating through all rows and elements in 'arr,' you will have flattened the two-dimensional array into 'newarray.'
+  // Print the 'newarray' to the console to see the flattened result.
+
+  //  (b) second part of this ques -
   // let arr = [
   //   [1, 2, [10, 11, 12, 13, 14, 15, [10, 11, 12, 13, 14, 15]]],
   //   [3, 4],
   //   [5, 6, 7, 8, 9, [5, 6, 7, 8, 9, [5, 6, 7, 8, 9]]],
   //   [10, 11, 12, 13, 14, 15],
   // ];
+
+  //   code -
+  //create a function  printarray which will return the output
+  //create a empty array newarray to store the element
+  //iterate the array if curent element is not array then add to the newarray
+  // if it is  array then pass it to the recursive function
+  let arr = [1, 2, 3, 4, [1, 2], [3, 4, [3, 4]], 5];
+  let newarray = [];
+  function printarray(arr) {
+    for (let i = 0; i < arr.length; i++) {
+      if (Array.isArray(arr[i])) {
+        printarray(arr[i]);
+      } else {
+        newarray.push(arr[i]);
+      }
+    }
+    return newarray;
+  }
+
+  console.log(printarray(arr));
+
+  //   algo -
+
+  // The given JavaScript code defines a function called 'printarray' that recursively flattens a nested array and returns the flattened result.
+  // Initialize an empty array called 'newarray' to store the flattened elements.
+  // Define a function called 'printarray' that takes an array ('arr') as its parameter.
+  // Inside the 'printarray' function:
+  // Start a loop that iterates through the elements of the input array ('arr').
+  // For each element in 'arr':
+  // Check if the current element is an array using 'Array.isArray()'.
+  // If it is an array (nested array), call the 'printarray' function recursively with that nested array as the argument.
+  // If it's not an array (a simple element), add it to the 'newarray.'
+  // Continue this process until all elements in the input array and its nested arrays have been processed.
+  // Return the 'newarray,' which will contain all the flattened elements.
+  // Print the result by calling 'printarray' with the initial 'arr' as an argument and logging the returned 'newarray' to the console.
 </script>
