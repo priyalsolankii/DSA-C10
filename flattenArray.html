@@ -92,4 +92,29 @@
   // Continue this process until all elements in the input array and its nested arrays have been processed.
   // Return the 'newarray,' which will contain all the flattened elements.
   // Print the result by calling 'printarray' with the initial 'arr' as an argument and logging the returned 'newarray' to the console.
+
+  // link -
+  // https://flexiple.com/javascript/flatten-array-javascript/
+
+  //   CODE BY ANKIT BHAI -
+
+  const runLoopInReverse = (num) => {
+    for (let i = num; i > 0; i--) {
+      console.log(i);
+    }
+  };
+
+  const runLoopInReverseUsingRecusrion = (num) => {
+    const iterateNumer = (i) => {
+      console.log(i);
+      if (i !== 0) {
+        num--;
+        iterateNumer(num);
+      }
+    };
+
+    iterateNumer(num);
+  };
+
+  runLoopInReverseUsingRecusrion(10);
 </script>
